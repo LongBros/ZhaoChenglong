@@ -1,0 +1,16 @@
+今天学习了git命令的使用，收货颇多，现在回顾一下其中的一部分
+//分支
+git branch列出所有分支
+git checkout long切换到名为long的分支
+git branch long添加名为long的分支
+git checkout -b long添加名为long的分支并切换到它
+git merge long合并long分支与当前分支
+git branch -d long删除名为long的分支
+
+//本地仓库与远程仓库间的操作
+使用git remote add origin git@github:LongBros/learngit.git连接远程仓库
+git remote列出远程仓库的分支即origin
+git remote -v列出远程仓库的详细信息
+git add read.txt添加文件
+git commit -m "version2"修改提交后的文件，可以是修改了很多个文件
+git push master lon将修改后的文件同步至远程仓库
