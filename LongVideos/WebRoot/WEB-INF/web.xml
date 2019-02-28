@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>LongVideos</display-name>
+  
+  <servlet>
+     <servlet-name>SpideThree</servlet-name>
+     <servlet-class>servlet.SpideThree</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SpideAiqiYi</servlet-name>
+    <servlet-class>servlet.SpideAiqiYi</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SpideYouku</servlet-name>
+    <servlet-class>servlet.SpideYouku</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SpideTencent</servlet-name>
+    <servlet-class>servlet.SpideTencent</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Search</servlet-name>
+    <servlet-class>servlet.Search</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SearchYouku</servlet-name>
+    <servlet-class>servlet.SearchYouku</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MainPage</servlet-name>
+    <servlet-class>servlet.MainPage</servlet-class>
+  </servlet>
+
+
+
+
+
+
+  <servlet-mapping>
+     <servlet-name>SpideThree</servlet-name>
+     <url-pattern>/SpideThree</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SpideAiqiYi</servlet-name>
+    <url-pattern>/SpideAiqiYi</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SpideYouku</servlet-name>
+    <url-pattern>/SpideYouku</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SpideTencent</servlet-name>
+    <url-pattern>/SpideTencent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Search</servlet-name>
+    <url-pattern>/Search</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchYouku</servlet-name>
+    <url-pattern>/SearchYouku</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MainPage</servlet-name>
+    <url-pattern>/MainPage</url-pattern>
+  </servlet-mapping>
+ 
+ 
+  <filter>
+      <filter-name>EncodingFilter</filter-name>
+      <filter-class>filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+      <filter-name>EncodingFilter</filter-name>
+      <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <error-page>
+    <exception-type>java.net.SocketTimeoutException</exception-type>
+    <location>/error.jsp</location>
+  </error-page>
+  
+  <welcome-file-list>
+    <welcome-file>MainPage</welcome-file>
+   <!--  <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file> -->
+  </welcome-file-list>
+</web-app>

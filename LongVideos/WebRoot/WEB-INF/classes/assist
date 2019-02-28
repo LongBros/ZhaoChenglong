@@ -1,0 +1,197 @@
+1.Element play中的
+<a class="js-tongjic" href="/m/gafjY0L4S0X5UB.html"> 
+				  <div class="cover g-playicon"> 
+				   <img src="https://p.ssl.qhimg.com/t01575b9ac4db91d0eb.jpg"> 
+				   <span class="hint">1987</span> 
+				  </div> 
+				  <div class="detail"> 
+				   <p class="title g-clear"> <span class="s1">倩女幽魂 87版</span> <span class="s2">8.6</span> </p> 
+				   <p class="star">主演：张国荣 王祖贤 午马 刘兆铭 王晶</p> 
+				  </div> </a>
+				  
+		对字符串进行四次处理：第1次找出href，第2次src，第3次span---年份，名，评分，第4次---演员
+				  
+1.1<a class="js-tongjic" href="/m/gKLiYhH4RHb1TB.html"> 
+ <div class="cover g-playicon"> 
+  <img src="https://p.ssl.qhimg.com/t01ce93088df7cc3487.jpg"> 
+  <span class="pay">付费</span> 
+  <span class="hint">2018</span> 
+ </div> 
+ <div class="detail"> 
+  <p class="title g-clear"> <span class="s1">勇敢者的游戏：决战丛林</span> <span class="s2">7.0</span> </p> 
+  <p class="star">主演：道恩·强森 凯文·哈特 杰克·布莱克 凯伦·吉兰 尼克·乔纳斯</p> 
+ </div> </a>
+1.2含有剧集的
+<li class="item">
+                        <a class="js-tongjic" href="/tv/QrZtcH7lRz8mNn.html">
+                            <div class="cover g-playicon">
+                                <img src="https://p.ssl.qhimg.com/d/dy_5d28753bce618e20bb5ea35fea48c2e8.jpg">
+                                                                <span class="hint">更新至41集</span>                            </div>
+                            <div class="detail">
+                                <p class="title g-clear">
+                                    <span class="s1">好久不见</span>
+                                    <span class="s2"></span>
+                                </p>
+                                <p class="star">主演：杨子姗 郑恺 张国立 江珊 田雷</p>
+                            </div>
+                        </a>
+</li>
+				  
+2.根据spilt方法截取后的
+<a class="js-tongjic" href="/m/gafjY0L4S0X5UB.html"
+ 
+ <div class="cover g-playicon"
+ 
+  <img src="https://p.ssl.qhimg.com/t01575b9ac4db91d0eb.jpg"
+ 
+  <span class="hint"
+1987</span
+ 
+ </div
+ 
+ <div class="detail"
+ 
+  <p class="title g-clear"
+ <span class="s1"
+倩女幽魂 87版</span
+ <span class="s2"
+8.6</span
+ </p
+ 
+  <p class="star"
+主演：张国荣 王祖贤 午马 刘兆铭 王晶</p
+ 
+ </div
+ </a
+ 
+ 3.1电影播放界面的id     js-site-wrap
+ <div class="top-list-btns g-clear" id="js-site-wrap"> 
+ <a data-daochu="to=youku" href="http://cps.youku.com/redirect.html?id=0000028f&amp;url=http://v.youku.com/v_show/id_XMzQ2MzMwOTIyOA==.html&amp;tpa=dW5pb25faWQ9MTAyMjEzXzEwMDAwN18wMV8wMQ" class="js-site-btn btn btn-play"></a> 
+ <a href="https://www.360kan.com/appdownload" class="btn btn-sj"></a> 
+</div>
+ 3.2动漫播放界面的id     js-site-wrap
+ <div id="js-site-wrap"> 
+ <div class="s-top-list-ji"> 
+  <h2 class="title g-clear"><em></em>全部剧集</h2> 
+  <div class="ji-tab-content js-tab-content"> 
+   <div class="num-tab js-tabs"> 
+    <div class="num-tab-main g-clear js-tab"> 
+     <a data-num="1" data-daochu="to=qq" href="http://v.qq.com/x/page/n0026zh1nij.html?ptag=360kan.cartoon.free"> 1 </a> 
+     <a data-num="2" data-daochu="to=qq" href="http://v.qq.com/x/page/q00267cogtq.html?ptag=360kan.cartoon.free"> 2 </a> 
+     <a data-num="3" data-daochu="to=qq" href="http://v.qq.com/x/page/w0026ft9nsg.html?ptag=360kan.cartoon.free"> 3 </a> 
+     <a data-num="4" data-daochu="to=qq" href="http://v.qq.com/x/page/w0026vtr35v.html?ptag=360kan.cartoon.free"> 4 </a> 
+     <a data-num="5" data-daochu="to=qq" href="http://v.qq.com/x/page/i0026co1xx8.html?ptag=360kan.cartoon.free"> 5 </a> 
+     <a data-num="6" data-daochu="to=qq" href="http://v.qq.com/x/page/t0026so4azw.html?ptag=360kan.cartoon.free"> 6 </a> 
+     <a data-num="7" data-daochu="to=qq" href="http://v.qq.com/x/page/w0026ybz0rk.html?ptag=360kan.cartoon.free"> 7 </a> 
+     <a data-num="8" data-daochu="to=qq" href="http://v.qq.com/x/page/m0026b579os.html?ptag=360kan.cartoon.free"> 8 </a> 
+     <a data-num="9" data-daochu="to=qq" href="http://v.qq.com/x/page/j0026ve279x.html?ptag=360kan.cartoon.free"> 9 </a> 
+     <a data-num="10" data-daochu="to=qq" href="http://v.qq.com/x/page/b0026xusjnu.html?ptag=360kan.cartoon.free"> 10 </a> 
+     <a data-num="11" data-daochu="to=qq" href="http://v.qq.com/x/page/g0026in00b0.html?ptag=360kan.cartoon.free"> 11 </a> 
+     <a data-num="12" data-daochu="to=qq" href="http://v.qq.com/x/page/s0026ph8jr1.html?ptag=360kan.cartoon.free"> 12 </a> 
+     <a data-num="13" data-daochu="to=qq" href="http://v.qq.com/x/page/e0026hi3v9l.html?ptag=360kan.cartoon.free"> 13 </a> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</div>
+3.3
+<div id="js-site-wrap"> 
+ <div class="s-top-list-ji"> 
+  <h2 class="title g-clear"><em></em>全部剧集</h2> 
+  <div class="ji-tab-content js-tab-content"> 
+   <div class="num-tab js-tabs"> 
+    <div class="num-tab-main g-clear js-tab"> 
+     <a data-num="1" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrdu8le0.html?vfm=f_191_360y"> 1 </a> 
+     <a data-num="2" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrduh06k.html?vfm=f_191_360y"> 2 </a> 
+     <a data-num="3" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrdugqvk.html?vfm=f_191_360y&amp;fv=p_09_01"> 3 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="4" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrdugrrk.html?vfm=f_191_360y&amp;fv=p_09_01"> 4 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="5" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrduf8f4.html?vfm=f_191_360y&amp;fv=p_09_01"> 5 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="6" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrduf0h4.html?vfm=f_191_360y&amp;fv=p_09_01"> 6 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="7" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrdueqzo.html?vfm=f_191_360y&amp;fv=p_09_01"> 7 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="8" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrdqghek.html?vfm=f_191_360y&amp;fv=p_09_01"> 8 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="9" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrdqg17g.html?vfm=f_191_360y&amp;fv=p_09_01"> 9 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="10" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrdqjvpw.html?vfm=f_191_360y&amp;fv=p_09_01"> 10 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="11" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rreg62bc.html?vfm=f_191_360y&amp;fv=p_09_01"> 11 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="12" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rreg6bb0.html?vfm=f_191_360y&amp;fv=p_09_01"> 12 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="13" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrel3big.html?vfm=f_191_360y&amp;fv=p_09_01"> 13 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="14" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrel359g.html?vfm=f_191_360y&amp;fv=p_09_01"> 14 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="15" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrel2rq8.html?vfm=f_191_360y&amp;fv=p_09_01"> 15 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="16" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rre7m6a4.html?vfm=f_191_360y&amp;fv=p_09_01"> 16 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="17" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rre7q5ww.html?vfm=f_191_360y&amp;fv=p_09_01"> 17 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="18" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rre7q780.html?vfm=f_191_360y&amp;fv=p_09_01"> 18 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="19" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rredbflc.html?vfm=f_191_360y&amp;fv=p_09_01"> 19 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="20" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rredb6p8.html?vfm=f_191_360y&amp;fv=p_09_01"> 20 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="21" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrec67wg.html?vfm=f_191_360y&amp;fv=p_09_01"> 21 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="22" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrf2w5e8.html?vfm=f_191_360y&amp;fv=p_09_01"> 22 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="23" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrf2h0b0.html?vfm=f_191_360y&amp;fv=p_09_01"> 23 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="24" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrf2gtz8.html?vfm=f_191_360y&amp;fv=p_09_01"> 24 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="25" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrf7f2b0.html?vfm=f_191_360y&amp;fv=p_09_01"> 25 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="26" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrf7fhiw.html?vfm=f_191_360y&amp;fv=p_09_01"> 26 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="27" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rrf7fc0g.html?vfm=f_191_360y&amp;fv=p_09_01"> 27 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="28" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rret5t5w.html?vfm=f_191_360y&amp;fv=p_09_01"> 28 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="29" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rret5qn4.html?vfm=f_191_360y&amp;fv=p_09_01"> 29 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+     <a data-num="30" data-daochu="to=qiyi" href="http://www.iqiyi.com/v_19rret9kk8.html?vfm=f_191_360y&amp;fv=p_09_01"> 30 <i class="ico-fufei"></i><i class="ico-pay"></i> </a> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</div>
+3.4
+<div class="list-wrap" id="js-site-wrap"> 
+ <em class="top-new"></em> 
+ <ul class="list w-newfigure-list g-clear js-addnewicon"> 
+  <li title="丈夫在旅游时给美女拍照引发妻子强烈不满" class="w-newfigure w-newfigure-180x153"><a href="http://v.pptv.com/show/xbFibicWXLO3ncWqY.html?rcc_id=web_2055" data-daochu="to=pptv" class="js-link">
+    <div class="w-newfigure-imglink g-playicon js-playicon"> 
+     <img src="https://p0.ssl.qhimg.com/d/_hao360/default.png" data-src="https://p.ssl.so.com/p/http%3A%2F%2Fv.img.pplive.cn%2F84%2Fcd%2F84cd7d59ee9c8dacf5561acfa553a218%2F1523806959842.jpg" alt="丈夫在旅游时给美女拍照引发妻子强烈不满">
+     <span class="w-newfigure-hint">2018-04-15期</span>
+    </div>
+    <div class="w-newfigure-detail">
+     <p class="title g-clear"><span class="s1">丈夫在旅游时给美女拍照引发妻子强烈不满</span></p>
+    </div></a></li>
+  <li title="希望儿子叫我一声妈" class="w-newfigure w-newfigure-180x153"><a href="http://v.pptv.com/show/Lib6nJIzyYqADgU0.html?rcc_id=web_2055" data-daochu="to=pptv" class="js-link">
+    <div class="w-newfigure-imglink g-playicon js-playicon"> 
+     <img src="https://p0.ssl.qhimg.com/d/_hao360/default.png" data-src="https://p.ssl.so.com/p/http%3A%2F%2Fv.img.pplive.cn%2Fc7%2Fb2%2Fc7b2729841be3c01260e3a5bee079d5e%2F1523726801315.jpg" alt="希望儿子叫我一声妈">
+     <span class="w-newfigure-hint">2018-04-14期</span>
+    </div>
+    <div class="w-newfigure-detail">
+     <p class="title g-clear"><span class="s1">希望儿子叫我一声妈</span></p>
+    </div></a></li>
+  <li title="因为琐事争执 丈夫在高速公路上飙车" class="w-newfigure w-newfigure-180x153"><a href="http://v.pptv.com/show/y4yJBm7URILlY28.html?rcc_id=web_2055" data-daochu="to=pptv" class="js-link">
+    <div class="w-newfigure-imglink g-playicon js-playicon"> 
+     <img src="https://p0.ssl.qhimg.com/d/_hao360/default.png" data-src="https://p.ssl.qhimg.com/dmfd/180_100_/d/dy_3566a02b7f52c70661e31537efa8970d.jpg" alt="因为琐事争执 丈夫在高速公路上飙车">
+     <span class="w-newfigure-hint">2018-04-13期</span>
+    </div>
+    <div class="w-newfigure-detail">
+     <p class="title g-clear"><span class="s1">因为琐事争执 丈夫在高速公路上飙车</span></p>
+    </div></a></li>
+  <li title="丈夫疯狂给异性发红包 妻子难以接受" class="w-newfigure w-newfigure-180x153"><a href="http://v.pptv.com/show/Zz73dNxCsvBT0R0.html?rcc_id=web_2055" data-daochu="to=pptv" class="js-link">
+    <div class="w-newfigure-imglink g-playicon js-playicon"> 
+     <img src="https://p0.ssl.qhimg.com/d/_hao360/default.png" data-src="https://p.ssl.qhimg.com/dmfd/180_100_/d/dy_1357463647fc9f8e55f408978eefd4db.jpg" alt="丈夫疯狂给异性发红包 妻子难以接受">
+     <span class="w-newfigure-hint">2018-04-12期</span>
+    </div>
+    <div class="w-newfigure-detail">
+     <p class="title g-clear"><span class="s1">丈夫疯狂给异性发红包 妻子难以接受</span></p>
+    </div></a></li>
+  <li title="老婆强势丈夫七次离家出走" class="w-newfigure w-newfigure-180x153"><a href="http://v.pptv.com/show/a2EurRV76ymMCtY.html?rcc_id=web_2055" data-daochu="to=pptv" class="js-link">
+    <div class="w-newfigure-imglink g-playicon js-playicon"> 
+     <img src="https://p0.ssl.qhimg.com/d/_hao360/default.png" data-src="https://p.ssl.qhimg.com/dmfd/180_100_/d/dy_2408dc485ba016076ebd51d3e2da7c66.jpg" alt="老婆强势丈夫七次离家出走">
+     <span class="w-newfigure-hint">2018-04-11期</span>
+    </div>
+    <div class="w-newfigure-detail">
+     <p class="title g-clear"><span class="s1">老婆强势丈夫七次离家出走</span></p>
+    </div></a></li>
+  <li title="35岁女儿一事无成 急坏母亲" class="w-newfigure w-newfigure-180x153"><a href="http://v.pptv.com/show/a42KCXHXR4XoZmo.html?rcc_id=web_2055" data-daochu="to=pptv" class="js-link">
+    <div class="w-newfigure-imglink g-playicon js-playicon"> 
+     <img src="https://p0.ssl.qhimg.com/d/_hao360/default.png" data-src="https://p.ssl.qhimg.com/dmfd/180_100_/d/dy_955bf018c434d71093bb1c64af10d89d.jpg" alt="35岁女儿一事无成 急坏母亲">
+     <span class="w-newfigure-hint">2018-04-10期</span>
+    </div>
+    <div class="w-newfigure-detail">
+     <p class="title g-clear"><span class="s1">35岁女儿一事无成 急坏母亲</span></p>
+    </div></a></li> 
+ </ul> 
+</div>
+
+
+4.1player.jsp播放界面待优化项
+   1).实现当前剧集播放完毕自动播放下一集
+   2)。实现将当前播放视频的集号特殊显示
