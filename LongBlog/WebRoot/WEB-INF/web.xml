@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>LongBlog</display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Comment</servlet-name>
+    <servlet-class>servlet.Comment</servlet-class>
+  </servlet>
+  <servlet>
+    <description>提供博客的模糊搜索功能</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteBlog</servlet-name>
+    <servlet-class>servlet.DeleteBlog</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ReleaseBlog</servlet-name>
+    <servlet-class>servlet.ReleaseBlog</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateBlog</servlet-name>
+    <servlet-class>servlet.UpdateBlog</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RecoverBlog</servlet-name>
+    <servlet-class>servlet.RecoverBlog</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>servlet.Login</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BackupServlet</servlet-name>
+    <servlet-class>servlet.BackupServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddAuthor</servlet-name>
+    <servlet-class>servlet.AddAuthor</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ToHtmlFile</servlet-name>
+    <servlet-class>util.ToHtmlFile</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+ 
+
+  <servlet-mapping>
+    <servlet-name>Comment</servlet-name>
+    <url-pattern>/Comment</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteBlog</servlet-name>
+    <url-pattern>/DeleteBlog</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ReleaseBlog</servlet-name>
+    <url-pattern>/ReleaseBlog</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateBlog</servlet-name>
+    <url-pattern>/UpdateBlog</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RecoverBlog</servlet-name>
+    <url-pattern>/RecoverBlog</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BackupServlet</servlet-name>
+    <url-pattern>/BackupServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddAuthor</servlet-name>
+    <url-pattern>/AddAuthor</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ToHtmlFile</servlet-name>
+    <url-pattern>/ToHtmlFile</url-pattern>
+  </servlet-mapping>
+  
+   <!-- 配置编码过滤器 -->
+  <filter>
+      <filter-name>EncodingFilter</filter-name>
+      <filter-class>filter.EncodingFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+     <filter-name>EncodingFilter</filter-name>
+     <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <error-page>
+    <exception-type>java.lang.Exception</exception-type>
+    <location>/error.jsp</location>
+  </error-page>
+ 
+  <error-page>
+     <error-code>404</error-code>
+     <location>/404.jsp</location>
+  </error-page>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>loginByLearnId.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

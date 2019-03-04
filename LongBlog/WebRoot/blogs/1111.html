@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>Detail Blog</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<link href="../css/base.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/my.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+
+  </head>
+  
+  
+  <body>
+  <header>
+    <div class="headtop"></div>
+    <div class="contenttop">
+      <div class="logo f_l">Long Bro的博客</div>
+      <div class="search f_r">
+        <form action="searchblog.jsp" method="post" name="searchform" id="searchform">
+          <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字'}" type="text">
+          <input name="show" value="title" type="hidden">
+          <input name="tempid" value="1" type="hidden">
+          <input name="tbname" value="news" type="hidden">
+          <input name="Submit" class="input_submit" value="搜索" type="submit">
+        </form>
+      </div>
+      <div class="blank"></div>
+      <nav>
+        <div  class="navigation">
+          <ul class="menu">
+            <li><a href="index.jsp">网站首页</a>
+               <ul>
+                  <li><a href="login.jsp?option=write">写写写</a></li>
+               </ul>
+            </li>
+             
+            <li><a href="#">我的作品</a>
+             
+            </li>
+            <li><a href="login.jsp?option=manage">后台管理</a> 
+                
+            </li>
+            <li><a href="msgboard.jsp">给我留言</a> </li>
+            <li><a href="#">关于我们</a>
+              <ul>
+                <li><a href="about.jsp">简介</a></li>
+                <li><a href="listpic.jsp">相册</a></li>
+                <li><a href="http://longqcloud.cn/love/yinger0/index.html">n ss!w !</a></li>
+                <li><a href="http://longqcloud.cn/love/yinger1/index.html">我爱你</a></li>
+                <li><a href="http://longqcloud.cn/love/yinger2/index.html">我爱你</a></li>
+                <li><a href="http://longqcloud.cn/love/yinger3/index.html">我爱你</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        
+      </nav>
+      <SCRIPT type=text/javascript>
+	// Navigation Menu
+	$(function() {
+		$(".menu ul").css({display: "none"}); // Opera Fix
+		$(".menu li").hover(function(){
+			$(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown("normal");
+		},function(){//光标移走后隐藏
+			$(this).find('ul:first').css({visibility: "hidden"});
+		});
+	});
+</SCRIPT> 
+    </div>
+  </header>
+  
+  
+    <div class="topnav">
+        <a href="http://www.longqcloud.cn" target="_blank">Long Bro博客</a>——查看其它<a href="http://www.longqcloud.cn/LongVideos" target="_blank">Long Bro影院</a>
+    </div>
+   
+    <div class="detailblog">
+				<font face="Arial" size="+4" color="#008000"><center>博客改版规划1</center></font></br>
+				<p  align="center"><font size="-1">&emsp;作者:赵成龙&nbsp;发布时间:2018-05-18 10:13:11&nbsp;所属类别:IT技术 &nbsp;浏览量:22</font></p></br></br>
+				<font size="+1"  color="#000000">&nbsp;
+ 从这次开始，以后博客每改版一次，写一次博客来规划如何改版。 1.主界面变化：不再显示所有博客，只显示技术博客，提供其他博客的接口，但需登录后方能访问。 2.添加登录功能，为指定功能设置权限，只有登录之后才能使用。这些功能包括，写博客博文，查阅非技术博文，进入后台管理界面... 3.后台管理界面变化：实现查看博文的多样化，三个下拉列表，分别实现按分类查看博文，按日期（年月）查看博文，按作者查看博文。查看博文可自动计算博文的字数。 4.将博客静态化，所有页面内容访问时均为.html后缀，而非.jsp或servlet 5.后台管理中友情链接菜单或将换为Long Bro系列产品，并添加友情链接菜单，用来放置其他优秀博客网站或其他。 6.写博文可能的话将博文内容的数据类型改为bomb，而非varchar或其他。
+
+</font></br><br><br><br><br><br>
+			<form action='/LongBlog/Comment?b_Id="+id+"&c_Ip="+l_Ip+"' method='post'>
+			<textarea rows='5' cols='90' name='content' placeholder='一言不合就吐槽' ></textarea>
+			<input type='submit' value='评论' align='right'>
+			</form>
+
+				<p><img src='/images/aodamiao/baibai.gif' width='25px' height='25px'><nobr>IP:192.168.199.233<br><br>2018年加油，让自己越来越优秀<br><br>2018-04-11 07:45:46</p>
+				<HR align='LEFT' size='0.01' width='100%' color='#ffffFF' noshade>
+			
+  </div>
+    <footer>
+    <div class="footer">
+      <div class="f_l">
+        <p>All Rights Reserved 版权所有：<a href="http://www.longqcloud.cn/EryaExam" target="_blank">尔雅助手</a> 备案号：豫ICP备16023798号-1</p>
+      </div>
+      <div class="f_r textr">
+        <p>Design by Long Bro</p>
+       
+         <br><h6 align="center">网站访问量共2000000人次</h6>
+      </div>
+    </div>
+  </footer>
+   </body>
+</html>

@@ -1,0 +1,105 @@
+<html>
+<head>
+<script src="TaskMenu.js"></script>
+<script>
+var taskMenu1;
+var taskMenu2;
+var taskMenu3;
+var taskMenu4;
+var taskMenu5;
+var item1;
+var item2;
+var item3;
+var item4;
+var item5;
+var item6;
+var item7;
+var item8;
+var item9;
+var item10;
+var item11;
+var item12;
+var item13;
+var item14;
+var item15;
+var item16;
+var item17;
+var item18;
+var item19;
+var item20;
+var item21;
+TaskMenu.setStyle("Blue/BlueStyle.css"); 
+
+window.onload = function()
+{
+	TaskMenu.setHeadMenuSpecial(true);
+	//TaskMenu.setScrollbarEnabled(true);
+	//TaskMenu.setAutoBehavior(false);
+	//博客管理
+	item1 = new TaskMenuItem("查看博文","Image/demo.gif","parent.window.frames[1].location.href='viewBlogs.jsp'");
+	item2 = new TaskMenuItem("使用指南","Image/api.gif","parent.window.frames[1].location.href='TaskMenu_API.html'");
+    item3 = new TaskMenuItem("作者管理","Image/api.gif","parent.window.frames[1].location.href='showAuthor.jsp'");
+	item4 = new TaskMenuItem("分类管理","Image/friends.gif","parent.window.frames[1].location.href='viewCategory.jsp'");
+	//网站活跃度分析
+	item5 = new TaskMenuItem("阅读量");
+	item6 = new TaskMenuItem("评论管理","Image/friends.gif","parent.window.frames[1].location.href='showCom.jsp'");
+	item7 = new TaskMenuItem("网站访问量","Image/friends.gif","parent.window.frames[1].location.href='visitLog.jsp'");
+	//回收站
+	item9 = new TaskMenuItem("删除的博客","Image/friends.gif","parent.window.frames[1].location.href='recyclebin.jsp'");
+	item10 = new TaskMenuItem("删除的分类");
+	//我的其他作品
+	item11 = new TaskMenuItem("超市购物管理","Image/dload.gif","top.location.href='http://www.longqcloud.cn/SuperMarket'");
+	item12 = new TaskMenuItem("尔雅考试助手","Image/dload.gif","top.location.href='http://www.longqcloud.cn/EryaExam'");
+	item13 = new TaskMenuItem("LongBro博客","Image/update.gif","top.location.href='http://www.longqcloud.cn'");
+    item14 = new TaskMenuItem("LongBro视频","Image/update.gif","top.location.href='http://www.longqcloud.cn/LongVideos'");
+	item15 = new TaskMenuItem("WeBlogs","Image/update.gif","top.location.href='http://www.longqcloud.cn/WeBlogs'");
+	item16 = new TaskMenuItem("LongBro英语","Image/update.gif","top.location.href='http://www.longqcloud.cn/LongEnglish'");
+	item17 = new TaskMenuItem("中国-省市县镇村","Image/update.gif","top.location.href='http://www.longqcloud.cn/LongNovel/SpiderPro'");
+	//外链
+	item18 =new TaskMenuItem("n ss!w !", "Image/update.gif", "top.location.href='http://www.longqcloud.cn/love/yinger0/index.html'")
+	item19 =new TaskMenuItem("我爱你", "Image/update.gif", "top.location.href='http://www.longqcloud.cn/love/yinger1/index.html'")
+    item20 =new TaskMenuItem("我爱你", "Image/update.gif", "top.location.href='http://www.longqcloud.cn/love/yinger2/index.html")
+	item21 =new TaskMenuItem("我爱你", "Image/update.gif", "top.location.href='http://www.longqcloud.cn/love/yinger3/index.html'")
+	
+	
+	
+	//博文管理
+	taskMenu1 = new TaskMenu("博文管理");
+	taskMenu1.add(item1);//博文管理
+	taskMenu1.add(item2,0);//使用指南
+	taskMenu1.add(item3);//作者管理
+	taskMenu1.add(item4);//分类管理
+	taskMenu1.setBackground("Image/bg.gif");
+	taskMenu1.init();
+	//活跃度分析
+	taskMenu2 = new TaskMenu("活跃度分析");
+	taskMenu2.add(item5);//评论管理
+	taskMenu2.add(item6);//阅读量分析
+	taskMenu2.add(item7);//网站访问量
+	taskMenu2.init();
+	//回收站
+	taskMenu3=new TaskMenu("回收站");
+	taskMenu3.init();
+	taskMenu3.add(item9);
+	taskMenu3.add(item10);
+	//我的其他作品
+	taskMenu4= new TaskMenu("Long Bro系列产品");
+	taskMenu4.init();
+	taskMenu4.add(item11);//超市购物管理
+	taskMenu4.add(item12);//尔雅考试助手
+	taskMenu4.add(item13);//LongBro博客
+	taskMenu4.add(item14);//LongBro影视
+	taskMenu4.add(item15);//WeBlog
+	taskMenu4.add(item16);//LongBro英语
+	taskMenu4.add(item17);//
+	//友情链接
+	taskMenu5=new TaskMenu("友情链接");
+	taskMenu5.init();
+	taskMenu5.add(item18);
+	taskMenu5.add(item19);
+	taskMenu5.add(item20);
+	taskMenu5.add(item21);
+}
+</script>
+</head>
+</html>
