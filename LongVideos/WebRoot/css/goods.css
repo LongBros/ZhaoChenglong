@@ -1,0 +1,22 @@
+.good{
+	float: left;
+	width: 222px;
+	height: 412px;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+.good img{
+	width: 218px;
+	height: 218px;
+}
+.good p{
+	font-size: 15px;
+}
+.good p a{
+	text-decoration: none;
+	color: black;
+}
+.good p a:hover{
+	text-decoration: none;
+	color: red;
+}

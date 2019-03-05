@@ -21,5 +21,9 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="E:/jar/jsoup-1.8.1.jar"/>
 	<classpathentry kind="lib" path="E:/jar/mysql-connector-java-5.0.8-bin.jar"/>
+	<classpathentry kind="lib" path="E:/jar/taobao/taobao-sdk-java-auto_1521526934105-20180619.jar"/>
+	<classpathentry kind="lib" path="E:/jar/taobao/taobao-sdk-java-auto_1521526934105-20180619-source.jar"/>
+	<classpathentry kind="lib" path="E:/jar/jfreechart-1.0.19/lib/jfreechart-1.0.19.jar"/>
+	<classpathentry kind="lib" path="E:/jar/jfreechart-1.0.19/lib/jcommon-1.0.23.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

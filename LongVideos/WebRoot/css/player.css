@@ -1,5 +1,10 @@
 body{
-	background-color: #000000;
+	
+}
+.top{
+	width: 100%;
+	background-color: #2e2e36;
+	height: 700px;
 }
 /*播放器*/
 .player{
@@ -9,62 +14,144 @@ body{
 }
 /*电视剧，动漫剧集*/
 .episode{
-    padding-top: 88px;
-    margin-left:30px;
+    padding-top: 1px;
+    margin:28px;
+    width:200px;
+    height:553px;
+    overflow: auto;
+    background: #8cbbb5;
 }
-/*剧集中的集数链接*/
-.episode a{
+/*电视剧和动漫剧集中的集数*/
+.episode noc span{
 	border:1px solid #e6e6e6;
 	display: inline-block;
 	margin-top:2px;
-	width: 36px;
-	height: 36px;
-	line-height: 36px;
+	margin-left:5px;
+	width: 33px;
+	height: 33px;
+	line-height: 33px;
 	background-color: #fff;
 	text-align: center;
 	margin: 0,4px;
 	color: #222;
 	text-decoration: none;
 }
-.zongyi{
-	padding-top: 28px;
+.episode current span{
+	border:1px solid #e6e6e6;
+	display: inline-block;
+	margin-top:2px;
+	margin-left:5px;
+	width: 33px;
+	height: 33px;
+	line-height: 33px;
+	background-color: #2e2e36;
+	text-align: center;
+	margin: 0,4px;
+	text-decoration: none;
+	color: #f00
 }
-.zongyi a{
-		text-decoration: none;
-		display: inline-block;
-		border:1px solid #e6e6e6;
-		color: #222;
-		background-color: #fff;
-		line-height: 36px;
-		text-align: center;
-		margin: 0,4px;
-		width: 120px;
-	
+/*综艺中的期数*/
+.zongyi{
+	margin:28px;
+	width:200px;
+	height:553px;
+	overflow: auto;
+    background: #8cbbb5;
+}
+.zongyi current span{
+	border:1px solid #e6e6e6;
+	display: inline-block;
+	margin-left:20px;
+	width: 120px;
+	height: 33px;
+	line-height: 33px;
+	background-color: #2e2e36;
+	text-align: center;
+	margin: 0,4px;
+	text-decoration: none;
+	color: #f00
+}
+.zongyi noc span{
+	text-decoration: none;
+	display: inline-block;
+	border:1px solid #e6e6e6;
+	color: #222;
+	background-color: #fff;
+	line-height: 36px;
+	text-align: center;
+	margin: 0,4px;
+	margin-left:20px;
+	width: 120px;
 }
 .title{
-	font-size: 20px;
-	color:#000;
+	position: relative;
+    z-index: 2;
+    font-size: 22px;
+    line-height: 32px;
+    margin: 0 58px 0 0;
+    font-weight: 500;
+    color: #fff;
 }
 des{
 	font-size: 15px;
 	color: red;
 }
-.f_l {
-	float: left
+.file{
+	width: 18px;height: 18px;
+	background-image: url("../images/image-2x.png"); 
 }
-.f_r {
-	float: right
+.ao img{
+	width: 20px;
+	height: 24px;
+	/*display:none;隐藏后不占空间*/
+	/*visibility:visible;*//*隐藏后仍占空间*/
 }
-footer{
-	padding: 20px 0;
-	color: #ccc;
-	margin: 20px 0 0 0
+.fabiao{
+	float: right;
+	margin-right: 100px;
 }
-.footer {
-	width: 1000px;
-	margin: auto;
-	overflow: hidden
+.coms{
+	margin-top: 10px;
 }
-.textr {
-	text-align: right
+.coms img{
+	margin-top: 10px;
+	width:30px; height:30px; border-radius:100%;
+}
+
+.coms nick{
+}
+.coms time{
+	float: right;
+	margin-right: 40px;
+	color: gray;
+	font-size: 10px;
+}
+.comment{
+	margin-left: 30px;
+	margin-top: 10px;
+	margin-right: 60px;
+}
+.comment img{
+	width: 20px;
+	height: 24px;
+}
+.zan{
+	margin-left: 200px;
+}
+.zan span{
+	color: gray;
+	
+}
+.zan img{
+	width: 16px;
+	height: 15px;
+	background-size: 100% 100%;
+	background-position: center;
+	margin-left: 20px;
+}
+.line{
+	margin-left:30px;
+	margin-top:10px;
+	 border:gray 1px dashed; line-height:0.1px;color:#666;
+	 width: 95%;
 }
