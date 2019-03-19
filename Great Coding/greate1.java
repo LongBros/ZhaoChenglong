@@ -15,7 +15,7 @@ public class Test {
 		dataExport();
 	}
 	public static List dataExport(){
-		//定义map的List
+		//定义存放map的List
 		List<Map<String,String>> list=new ArrayList<Map<String,String>>();
 		//定义二维数组的Map的Value
 		String person[][]={
@@ -25,9 +25,10 @@ public class Test {
 				{"ZhaoShuanglong","male","1999-10-16"},
 				{"ZhaoYanhui","female","2000-04-05"}
 		};
-		for(int i=0;i<person.length;i++){
+		for(int i=0;i<person.length;i++){//使用外层循环向list中添加map即二维数组中的一条数据
+			//定义存放value的map
 			Map<String,String> map=new HashMap<String, String>();
-			for(int j=0;j<s.length;j++){
+			for(int j=0;j<s.length;j++){//使用内层循环将value put进map
 				if(j!=3){//前三个value从二维数组中取出
 					map.put(s[j], person[i][j]);			
 				}else{//第四个value年龄是计算来的，而非在数组中
