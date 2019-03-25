@@ -1,7 +1,7 @@
 <%@page import="java.sql.ResultSet"%>
-<%@page import="util.OtherUtil"%>
+<%@page import="com.longbro.util.OtherUtil"%>
 <%@page import="java.sql.Statement"%>
-<%@page import="util.JdbcUtil"%>
+<%@page import="com.longbro.util.JdbcUtil"%>
 <%@page import="java.sql.Connection"%>
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%
@@ -71,8 +71,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <td><%=id %></td>
                 <td><%=bid %></td>
                 <td title="<%=content%>"><%=cont %></td>
-                <td><%=ip %></td>
                 <td><%=time %></td>
+                <td><%=ip %></td>
                 <td><%=ipath %></td>
              </tr>
              <%

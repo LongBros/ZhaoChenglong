@@ -1,0 +1,10 @@
+.title{
+	margin-top: 26px;
+}
+.link a{
+	margin-left:88px;
+}
+.link a:hover{
+	text-decoration: underline;
+	color: red;
+}

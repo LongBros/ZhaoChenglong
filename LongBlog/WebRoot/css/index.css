@@ -38,6 +38,15 @@
 	font-size: 16px;
 	font-family: "Î¢ÈíÑÅºÚ";
 }
+.bloglist h3:hover{
+	margin-left:10px;
+	color: #333;
+	font-size: 16px;
+	font-family: "Î¢ÈíÑÅºÚ";
+}
+.content{
+	height: 80px;
+}
 .bloglist figure {
 	float: left;
 	width: 25%;
@@ -90,38 +99,6 @@ a.readmore {
 	background: url(../images/rtitbg.png) no-repeat;
 	padding-left: 40px;
 	margin: 0 0 10px 0
-}
-/* ¹Ø×¢ÎÒ */
-.gzwm ul {
-	width: 100%;
-	overflow: hidden;
-}
-.gzwm li {
-	width: 60px;
-	margin: 0 10px 0 5px;
-	float: left;
-}
-.gzwm li a {
-	color: #747F8C;
-	width: 62px;
-	text-align: center;
-	padding-top: 60px;
-	float: left;
-}
-.gzwm .email {
-	background: url(../images/gz01.png) no-repeat;
-}
-.gzwm .qq {
-	background: url(../images/gz02.png) no-repeat;
-}
-.gzwm .tel {
-	background: url(../images/gz03.png) no-repeat;
-}
-.gzwm .prize {
-	background: url(../images/gz04.png) no-repeat;
-}
-.gzwm li a:hover {
-	opacity: 0.6;
 }
 /*Í¼ÎÄÁÐ±í*/
 .tuwen {
@@ -203,6 +180,7 @@ a.readmore {
 }
 .ad img {
 	width: 300px;
+	margin-left: 20px;
 }
 .viewNum{
 	background: url(../images/useful/view.png) no-repeat left center;

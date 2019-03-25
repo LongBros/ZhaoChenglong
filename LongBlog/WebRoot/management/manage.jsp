@@ -30,8 +30,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 if(!acc.equals("")){//cookie中账号不为空，说明已登录过
                    %>
                    <frameset cols="209,*" border="0">
-                     <frame src="management\TaskMenu.html" noresize>
-                     <frame src="/LongBlog/management/viewBlogs.jsp" noresize border="0" frameborder="0">
+                     <frame src="management/TaskMenu.html" noresize>
+                     <frame src="/management/viewBlogs.jsp" noresize border="0" frameborder="0">
                    </frameset>
                    <%
       

@@ -2,9 +2,10 @@ package others;
 
 //import java.io.UnsupportedEncodingException;
 
+import com.longbro.util.AddressUtils;
+
 import dao.BlogsDao;
-import net.sf.json.JSONObject;
-import util.AddressUtils;
+//import net.sf.json.JSONObject;
 
 public class Test {
 	public static void main(String[] args) throws Exception{
@@ -36,14 +37,14 @@ public class Test {
 	    } catch (Exception e) {  
 	        e.printStackTrace();  
 	    }  
-	    JSONObject json = JSONObject.fromObject(json_result);  
+	    /*JSONObject json = JSONObject.fromObject(json_result);  
 //	    System.out.println("json鏁版嵁锛�" + json);  
 	    String country = JSONObject.fromObject(json.get("data")).get("country").toString();  
 	    String region = JSONObject.fromObject(json.get("data")).get("region").toString();  
 	    String city = JSONObject.fromObject(json.get("data")).get("city").toString();  
 	    String county = JSONObject.fromObject(json.get("data")).get("county").toString();  
 	    String isp = JSONObject.fromObject(json.get("data")).get("isp").toString();  
-	    String area = JSONObject.fromObject(json.get("data")).get("area").toString();  
+	    String area = JSONObject.fromObject(json.get("data")).get("area").toString();  */
 //	    System.out.println("鍥藉锛�" + country);  
 //	    System.out.println("鍦板尯锛�" + area);  
 //	    System.out.println("鐪佷唤: " + region);  

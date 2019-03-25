@@ -5,6 +5,10 @@
 	margin-left:200px; 
 	margin-bottom:20px;
 }
+/*上一篇，下一篇所在盒子样式*/
+.otherbox{
+	 border:red 1px dashed; line-height:24px; height:144px; color:#666; margin:0 10px
+}
 /* .detailblog font{
 	margin: 20px 0 10px 0;
 	

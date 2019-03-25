@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name></display-name>
+  <servlet>
+    <servlet-name>spring</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>/WEB-INF/config/spring.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>spring</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+ 
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MainPage</servlet-name>
+    <servlet-class>servlet.MainPage</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <description>注册</description>
+    <display-name>注册</display-name>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>登录</description>
+    <display-name>登录</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>验证码</description>
+    <display-name>验证码</display-name>
+    <servlet-name>ValidateCode</servlet-name>
+    <servlet-class>servlet.ValidateCode</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SendCom</servlet-name>
+    <servlet-class>servlet.SendCom</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SendReply</servlet-name>
+    <servlet-class>servlet.SendReply</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Store</servlet-name>
+    <servlet-class>servlet.Store</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetPass</servlet-name>
+    <servlet-class>servlet.GetPass</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SendToast</servlet-name>
+    <servlet-class>servlet.SendToast</servlet-class>
+  </servlet>
+
+
+
+
+
+
+  
+
+
+  <servlet-mapping>
+    <servlet-name>MainPage</servlet-name>
+    <url-pattern>/MainPage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/Register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ValidateCode</servlet-name>
+    <url-pattern>/ValidateCode</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SendCom</servlet-name>
+    <url-pattern>/SendCom</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SendReply</servlet-name>
+    <url-pattern>/SendReply</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Store</servlet-name>
+    <url-pattern>/Store</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetPass</servlet-name>
+    <url-pattern>/GetPass</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SendToast</servlet-name>
+    <url-pattern>/SendToast</url-pattern>
+  </servlet-mapping>
+ 
+  <filter>
+      <filter-name>EncodingFilter</filter-name>
+      <filter-class>filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+      <filter-name>EncodingFilter</filter-name>
+      <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <error-page>
+    <exception-type>Exception</exception-type>
+    <location>/error/error.html</location>
+  </error-page>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/error/404.html</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/error/error.html</location>
+  </error-page>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

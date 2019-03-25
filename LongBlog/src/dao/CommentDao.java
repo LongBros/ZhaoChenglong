@@ -6,7 +6,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import util.JdbcUtil;
+import com.longbro.util.JdbcUtil;
+
 import beans.Comment;
 
 public class CommentDao {
@@ -26,6 +27,7 @@ public class CommentDao {
 			    String cont=rs.getString("c_Content");			    
 			    String time=rs.getString("c_Time");
 				String ip=rs.getString("c_Ip");
+				String add=rs.getString("c_Address");
 				String path=rs.getString("c_ImgPath");
 			    Comment comment=new Comment();
 			    comment.setId(c_Id);
@@ -33,6 +35,7 @@ public class CommentDao {
 			    comment.setContent(cont);
 			    comment.setTime(time);
 			    comment.setIp(ip);
+			    comment.setAdd(add);
 			    comment.setPath(path);
 			    comments.add(comment);
 			}

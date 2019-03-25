@@ -1,0 +1,144 @@
+2018-9-15
+创建数据库create database longvideo
+小喇叭-小喇叭-小喇叭-小喇叭-小喇叭-小喇叭-实时为你广播本站动态，比如谁谁谁登录了，谁谁谁签了到，谁谁谁用积分兑换了会员
+1.用户表
+id，用户名，密码，QQ号，真实名，注册时间（2018-10-17新加）
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nickname` varchar(45) NOT NULL,
+  `pass` varchar(45) NOT NULL,
+  `qq` varchar(45) NOT NULL,
+  `realname` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`,`nickname`,`pass`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `longvideo`.`user` 
+ADD COLUMN `r_Time` VARCHAR(45) NULL AFTER `realname`;
+
+积分交易动态--通过签到获取5积分，通过兑换会员消耗1000积分（-1000）
+交易id，交易对象，交易数量，交易方式，交易时间
+
+2.播放记录表precord
+记录p_Id，播放记录者p_Player，播放时间p_Time，记录片名p_Name,图片路径p_Path，记录类型p_Type，记录链接p_Link，记录播放链接p_Url
+CREATE TABLE `precord` (
+  `p_Id` int(11) NOT NULL AUTO_INCREMENT,
+  `p_Player` varchar(45) NOT NULL,
+  `p_Time` varchar(45) NOT NULL,
+  `p_Name` varchar(45) NOT NULL,
+  `p_Path` varchar(145) NOT NULL,
+  `p_Type` varchar(45) NOT NULL,
+  `p_Link` varchar(45) NOT NULL,
+  `p_Url` varchar(145) DEFAULT NULL,
+  PRIMARY KEY (`p_Id`),
+  UNIQUE KEY `p_Id_UNIQUE` (`p_Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+3.搜索记录表srecord
+记录s_Id,搜索者s_Searcher,搜索内容s_Content,搜索者ip-s_Ip,搜索者地址s_Address,搜索时间s_Time，
+
+
+4.访问日志表loginlog
+登录日志l_Id,登录用户l_User，登录l_Ip,，登录地址l_Address,登录时间l_Time
+CREATE TABLE `longvideo`.`loginlog` (
+  `l_Id` INT NOT NULL AUTO_INCREMENT,
+  `l_User` VARCHAR(45) NULL,
+  `l_Ip` VARCHAR(45) NOT NULL,
+  `l_Address` VARCHAR(45) NULL,
+  `l_Time` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`l_Id`),
+  UNIQUE INDEX `l_Id_UNIQUE` (`l_Id` ASC));
+
+ alter table loginlog  CHARSET=utf8;//无效
+ alter table loginlog convert to character set utf8;//有效
+
+
+5.评论表comment
+评论id-c_Id,被评论的视频c_Video,评论者c_User,评论内容c_Content,赞的数量c_Znum，踩的数量c_Cnum,评论ip-c_Ip,
+评论者地址c_Address,评论时间c_Time
+//添加赞数量和踩数量字段
+ALTER TABLE `longvideo`.`comment` 
+ADD COLUMN `c_Znum` INT NOT NULL AFTER `c_Content`,
+ADD COLUMN `c_Cnum` INT NOT NULL AFTER `c_Znum`;
+
+
+(1)赞记录表，踩记录表（根据这两个表判断某一用户是否已赞一条评论，若是，则显示为active的图片，且不可再点赞，反之亦然
+赞id-z_Id,被赞的评论的id-z_Cid,赞者-z_User,赞的ip-z_Ip,赞的时间-z_Time
+CREATE TABLE `longvideo`.`zrecord` (
+  `z_Id` INT NOT NULL AUTO_INCREMENT,
+  `z_Cid` INT NOT NULL,
+  `z_User` VARCHAR(45) NOT NULL,
+  `z_Ip` VARCHAR(45) NULL,
+  `z_Time` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`z_Id`),
+  UNIQUE INDEX `z_Id_UNIQUE` (`z_Id` ASC));
+  
+CREATE TABLE `longvideo`.`crecord` 
+ `c_Id` INT(11) NOT NULL AUTO_INCREMENT ,
+  `c_Cid` INT(11) NOT NULL ,
+   `c_User` VARCHAR(45) NOT NULL ,
+   `c_Ip` VARCHAR(45) NULL DEFAULT NULL ,
+  `c_Time` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`z_Id`),
+  UNIQUE INDEX `z_Id_UNIQUE` (`z_Id` ASC));
+  
+(2)无需建两个表，设置一个客户端只能点赞一次
+
+6.回复表reply
+回复id-r_Id,被回复的评论的id-c_Id,回复者r_User，回复内容r_Content，回复者ip-r_Ip，
+回复者地址r_Address,回复时间r_Time
+CREATE TABLE `longvideo`.`reply` (
+  `r_Id` INT NOT NULL AUTO_INCREMENT,
+  `c_Id` INT NOT NULL,
+  `r_User` VARCHAR(45) NOT NULL,
+  `r_Content` VARCHAR(45) NOT NULL,
+  `r_Ip` VARCHAR(45) NULL,
+  `r_Address` VARCHAR(45) NULL,
+  `r_Time` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`r_Id`),
+  UNIQUE INDEX `r_Id_UNIQUE` (`r_Id` ASC));
+
+
+7.弹幕barrage
+弹幕id-b_Id,被发弹幕的视频b_Video,发弹幕者-b_User,弹幕内容b_Content,发弹幕者ip-b_Ip，
+发弹幕者地址b_Address,发弹幕的时间b_Time
+8.收藏表store（2018-10-18想到，10-28实施）
+收藏s_Id，收藏者s_User,收藏的视频链接s_Url，收藏的视频名s_Vname,图片路径s_Path，
+视频类型s_Type，收藏时间s_Time
+CREATE TABLE `longvideo`.`store` (
+  `s_Id` INT NOT NULL AUTO_INCREMENT,
+  `s_User` VARCHAR(45) NOT NULL,
+  `s_Url` VARCHAR(145) NOT NULL,
+  `s_Vname` VARCHAR(45) NOT NULL,
+  `s_Path` VARCHAR(145) NULL,
+  `s_Type` VARCHAR(45) NULL,
+  `s_Time` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`s_Id`),
+  UNIQUE INDEX `s_Id_UNIQUE` (`s_Id` ASC)
+  )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  9.视频信息表video
+  视频id-v_Id,视频类型v_Type，视频名v_Name,视频链接v_Link,图片链接v_Img
+  CREATE TABLE `longvideo`.`video` (
+  `v_Id` INT NOT NULL AUTO_INCREMENT,
+  `v_Type` VARCHAR(45) NOT NULL,
+  `v_Name` VARCHAR(100) NOT NULL,
+  `v_Link` VARCHAR(145) NULL,
+  `v_Img` VARCHAR(145) NULL,
+  PRIMARY KEY (`v_Id`),
+  UNIQUE INDEX `v_Id_UNIQUE` (`v_Id` ASC)
+  )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+10吐槽墙 wall----2018-11-14
+吐槽w_Id,吐槽者昵称w_Nick,，吐槽头像w_Tx,吐槽内容w_Content，吐槽者w_Ip，吐槽者地址w_Add，吐槽时间w_Time，
+CREATE TABLE `longvideo`.`wall` (
+  `w_Id` INT NOT NULL AUTO_INCREMENT,
+  `w_Nick` VARCHAR(45) NOT NULL,
+  `w_Tx` VARCHAR(100) NOT NULL,
+  `w_Content` VARCHAR(145) NULL,
+  `w_Ip` VARCHAR(45) NULL,
+  `w_Add` VARCHAR(45) NULL,
+  `w_Time` VARCHAR(45) NULL,
+  PRIMARY KEY (`w_Id`),
+  UNIQUE INDEX `w_Id_UNIQUE` (`w_Id` ASC)
+  )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  //将吐槽内容最大字符数改为550，以便每日播报机器人自动播报。但用户人工吐槽仍必须是145字符，
+  ALTER TABLE `longvideo`.`wall` 
+CHANGE COLUMN `w_Content` `w_Content` VARCHAR(550) NOT NULL ,

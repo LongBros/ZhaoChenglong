@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import util.JdbcUtil;
+import com.longbro.util.JdbcUtil;
 
 
 public class Login extends HttpServlet {
@@ -44,9 +44,9 @@ public class Login extends HttpServlet {
 				cookie.setMaxAge(30*24*60*60);
 				response.addCookie(cookie);
 				if(option.equals("write")){
-					response.sendRedirect("/LongBlog/writeBlog.jsp");
+					response.sendRedirect("/writeBlog.jsp");
 				}else if(option.equals("manage")){
-					response.sendRedirect("/LongBlog/management/manage.jsp");
+					response.sendRedirect("/management/manage.jsp");
 				}
 			}else{
 				out.write("<script type=\"text/javascript\">window.alert(\"账号或密码错误\");</script>");

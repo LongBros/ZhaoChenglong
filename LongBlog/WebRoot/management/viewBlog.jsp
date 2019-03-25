@@ -28,10 +28,6 @@ String date=request.getParameter("date");
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
-
   </head>
   
   <body>
@@ -55,15 +51,14 @@ String date=request.getParameter("date");
        }else if(auth.equals("all")&&!cate.equals("all")&&date.equals("all")){//1,0,1
           sql="select * from blogs where cat_Id="+cate; 
        }
-//System.out.print(sql);
              BlogsDao inDao=new BlogsDao();
              ArrayList<Blogs> ar= inDao.queryBlogs(sql);
              CategoryDao c=new CategoryDao();
              %>
                <table border="1" width="900px" align="left">
              <tr>
-             
-                 <td>编辑 
+                 <td>编辑
+                 <td>内容长度</td> 
                  <td>b_Id</td>
                  <td>标题</td>
                  <td>内容</td>
@@ -76,6 +71,7 @@ String date=request.getParameter("date");
                  <td>删除
              </tr>
              <%
+             int l=0;
              for(int i=0;i<ar.size();i++){
                  Blogs blog=ar.get(i);
                  int id=blog.getId(); //根据id来查看某条博客的全部内容
@@ -84,6 +80,7 @@ String date=request.getParameter("date");
                     title=title.substring(0,5)+"...";
                  }
                  String content=blog.getContent();
+                 l=content.length();
                  if(content.length()>9){
                     content=content.substring(0,8)+"...";
                  }
@@ -98,7 +95,8 @@ String date=request.getParameter("date");
                
                  %>
                    <tr>
-                 <td><a href='/LongBlog/management/editBlog.jsp?id=<%=id%>'>编辑</a>                  
+                 <td><a href='/management/editBlog.jsp?id=<%=id%>'>编辑</a> 
+                 <td><%=l %></td>                 
                  <td><%=id %></td>
                  <td><%=title %></td>
                  <td><%=content %></td>
@@ -108,7 +106,7 @@ String date=request.getParameter("date");
                  <td><%=readNum %>
                  <td><%=comment %>
                  <td><%=cat_Name %>
-                 <td><a href='/LongBlog/DeleteBlog?id=<%=id%>'>删除</a>
+                 <td><em onclick="delete1(<%=id%>)">删除</em>
              </tr>
                  <%
                
@@ -117,4 +115,16 @@ String date=request.getParameter("date");
              
        %>
   </body>
+  <script type="text/javascript">
+    //通过js删除博客
+      function delete1(id) {
+      var r=confirm("确定删除该博客？");
+	  if(r==true){
+	      //window.location.assign='/DeleteBlog?id='+id;//服务器上不能用 
+	      window.open('/DeleteBlog?id='+id,'_self');
+	  }else{
+	    
+	  }
+	}
+  </script>
 </html>

@@ -15,8 +15,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import util.JdbcUtil;
-import util.OtherUtil;
+import com.longbro.util.JdbcUtil;
+import com.longbro.util.OtherUtil;
 /**
  * 发布评论(评论id，被评论的博客的id，评论内容，评论时间，评论来源的ip)
  * 发布评论的同时，该条博客下的评论数要加1

@@ -6,7 +6,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import util.JdbcUtil;
+import com.longbro.util.JdbcUtil;
+
 import beans.Category;
 
 public class CategoryDao {
@@ -44,21 +45,21 @@ public class CategoryDao {
 	}
 	
 	//根据类别id查询类别名--------已在cat_search.jsp中使用
-		public String queryCatNameById(int c_Id) throws SQLException {
-			con=JdbcUtil.getConnection();
-			st=con.createStatement();
-			//查询该博客类别id的类别名
-	        String sel="select cat_Name from category where cat_Id="+c_Id+";";
-	        st=con.createStatement();
-	        rs=st.executeQuery(sel);//此处需定义一新的结果集
-	        String cat_Name="";
-	        if(rs.next()){
-	           cat_Name=rs.getString("cat_Name");
-	        }
-	        rs.close();
-	        st.close();
-	        con.close();
-			return cat_Name;
-		}
+	public String queryCatNameById(int c_Id) throws SQLException {
+		con=JdbcUtil.getConnection();
+		st=con.createStatement();
+		//查询该博客类别id的类别名
+        String sel="select cat_Name from category where cat_Id="+c_Id+";";
+        st=con.createStatement();
+        rs=st.executeQuery(sel);//此处需定义一新的结果集
+        String cat_Name="";
+        if(rs.next()){
+           cat_Name=rs.getString("cat_Name");
+        }
+        rs.close();
+        st.close();
+        con.close();
+		return cat_Name;
+	}
 
 }

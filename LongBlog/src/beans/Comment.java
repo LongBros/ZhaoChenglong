@@ -6,6 +6,13 @@ public class Comment {
 	String content;
 	String time;
 	String ip;
+	String add;
+	public String getAdd() {
+		return add;
+	}
+	public void setAdd(String add) {
+		this.add = add;
+	}
 	String path;
 	public int getId() {
 		return id;

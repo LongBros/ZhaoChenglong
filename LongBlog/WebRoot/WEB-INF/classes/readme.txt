@@ -1,5 +1,7 @@
 CREATE SCHEMA `longblog` DEFAULT CHARACTER SET utf8 ;
-
+所有表：博客表，分类表，阅读情况表，评论表，回收站，网站访问日志表，留言板，每日一话表，作者表
+赞助表（2018-9-13），
+	修改自增指针			alter table blogs auto_increment =66
 1.<!-- 博客表：博客id，标题，内容，发布时间，作者 -->
 b_Id,b_Title,b_Content,b_Author
 
@@ -42,8 +44,8 @@ CREATE TABLE `blogs` (
   `v_Ip` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`v_Id`),
   UNIQUE INDEX `v_Id_UNIQUE` (`v_Id` ASC));
-  4.评论表comment
-  c_Id,b_Id,c_Content,c_Time,c_Ip
+4.评论表comment
+c_Id,b_Id,c_Content,c_Time,c_Ip
   
 CREATE TABLE `comment` (
   `c_Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -85,6 +87,11 @@ CREATE TABLE `log_vis` (
   PRIMARY KEY (`l_Id`),
   UNIQUE KEY `l_Id_UNIQUE` (`l_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+添加地址字段，调换位置
+ALTER TABLE `longblog`.`log_vis` 
+ADD COLUMN `l_Address` VARCHAR(45) NULL AFTER `l_Time`;
+ALTER TABLE `longblog`.`log_vis` 
+CHANGE COLUMN `l_Address` `l_Address` VARCHAR(45) NULL DEFAULT NULL AFTER `l_Ip`;
 
 7.留言板m_board------留言板message board
 留言id，头像路径，留言内容，留言者ip，留言时间
@@ -121,4 +128,24 @@ CREATE TABLE `author` (
   UNIQUE KEY `a_Id_UNIQUE` (`a_Id`),
   UNIQUE KEY `a_Name_UNIQUE` (`a_Name`),
   UNIQUE KEY `a_QQ_UNIQUE` (`a_QQ`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+10.赞助表sponsor
+id，时间（time），来源（source），备注（remark），金额（amount）
+CREATE TABLE `sponsor` (
+  `s_Id` int(11) NOT NULL AUTO_INCREMENT,
+  `s_Time` varchar(45) NOT NULL,
+  `s_Source` varchar(45) NOT NULL,
+  `s_Remark` varchar(45) DEFAULT NULL,
+  `s_Amount` double NOT NULL,
+  PRIMARY KEY (`s_Id`),
+  UNIQUE KEY `s_Id_UNIQUE` (`s_Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+11.页面受访情况表page_visited_con
+受访p_Id，受访页面p_Page，访问者p_Ip，访问时间p_Time
+CREATE TABLE `page_visited_con` (
+  `p_Id` int(11) NOT NULL,
+  `p_Page` int(6) DEFAULT NULL,
+  `p_Ip` varchar(66) DEFAULT NULL,
+  `p_Time` varchar(66) DEFAULT NULL,
+  PRIMARY KEY (`p_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

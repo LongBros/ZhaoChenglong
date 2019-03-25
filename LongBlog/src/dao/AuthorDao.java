@@ -6,7 +6,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import util.JdbcUtil;
+import com.longbro.util.JdbcUtil;
+
 import beans.Author;
 
 /**
@@ -34,7 +35,7 @@ public class AuthorDao {
 				Author author=new Author();
 				author.setA_Id(rs.getInt("a_Id"));
 				author.setA_Name(rs.getString("a_Name"));
-				System.out.println(rs.getString("a_Name"));
+//				System.out.println(rs.getString("a_Name"));
 				author.setA_QQ(rs.getString("a_QQ"));
 				author.setA_Phone(rs.getString("a_Phone"));
 				author.setA_Pass(rs.getString("a_Pass"));

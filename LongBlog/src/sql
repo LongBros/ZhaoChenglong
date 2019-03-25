@@ -1,0 +1,14 @@
+1.查询数据库中博客表的所有写博客的月份
+	select distinct left(b_Time,7) as y_m from blogs;
+2.查询数据库中博客表的所有写博客的天
+	select distinct left(b_Time,10) as y_m_d  from blogs;
+3.查询所有月份或所有天各自写的博客数量
+	select count(*) as amo from blogs where b_Time like '%"+y_m+"%'
+4.查询阅读量排行前十的博客
+	select * from blogs order by b_ViewNum desc limit 0,10
+5.分页查询博客分类id为1或3的博客
+	select * from blogs where cat_Id=1 or cat_Id=3 order by b_Id desc limit "+((pageI-1)*5)+",5
+6.查询分类id为1或3的博客的数量
+	select count(*) from blogs where cat_Id=1 or cat_Id=3;
+7.分页查询指定月份的所有博客
+	select * from blogs where b_Time like '"+date+"%' order by b_Id desc limit "+((pageI-1)*5)+",5

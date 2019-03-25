@@ -28,7 +28,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  <form action="/LongBlog/management/viewBlog.jsp" method="get" target="blogs">
+  <form action="/management/viewBlog.jsp" method="get" target="blogs">
   按作者<select name="author">
      <option value="all">全部</option>
      <option value="long">赵成龙</option>
@@ -69,7 +69,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </select>
   <input type="submit" value="检索">
     </form>
-    <iframe src="/LongBlog/management/viewBlog.jsp?author=all&cate=all&date=all" name="blogs" width="100%" height="100%"></iframe>
+    <iframe src="/management/viewBlog.jsp?author=all&cate=all&date=all" name="blogs" width="100%" height="100%"></iframe>
       
   </body>
 </html>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.longbro.bean.comment" >
+  <resultMap id="BaseResultMap" type="com.longbro.bean.Comment" >
+    <id column="c_Id" property="cId" jdbcType="INTEGER" />
+    <result column="c_Video" property="cVideo" jdbcType="VARCHAR" />
+    <result column="c_User" property="cUser" jdbcType="VARCHAR" />
+    <result column="c_Content" property="cContent" jdbcType="VARCHAR" />
+    <result column="c_Znum" property="cZnum" jdbcType="INTEGER" />
+    <result column="c_Cnum" property="cCnum" jdbcType="INTEGER" />
+    <result column="c_Ip" property="cIp" jdbcType="VARCHAR" />
+    <result column="c_Address" property="cAddress" jdbcType="VARCHAR" />
+    <result column="c_Time" property="cTime" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    c_Id, c_Video, c_User, c_Content, c_Znum, c_Cnum, c_Ip, c_Address, c_Time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from comment
+    where c_Id = #{cId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteComById" parameterType="java.lang.Integer" >
+    delete from comment
+    where c_Id = #{cId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.longbro.bean.Comment" >
+    insert into comment (c_Video, c_User, 
+      c_Content, c_Znum, c_Cnum, 
+      c_Ip, c_Address, c_Time
+      )
+    values (#{cVideo,jdbcType=VARCHAR}, #{cUser,jdbcType=VARCHAR}, 
+      #{cContent,jdbcType=VARCHAR}, #{cZnum,jdbcType=INTEGER}, #{cCnum,jdbcType=INTEGER}, 
+      #{cIp,jdbcType=VARCHAR}, #{cAddress,jdbcType=VARCHAR}, #{cTime,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.longbro.bean.Comment" >
+    insert into comment
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="cId != null" >
+        c_Id,
+      </if>
+      <if test="cVideo != null" >
+        c_Video,
+      </if>
+      <if test="cUser != null" >
+        c_User,
+      </if>
+      <if test="cContent != null" >
+        c_Content,
+      </if>
+      <if test="cZnum != null" >
+        c_Znum,
+      </if>
+      <if test="cCnum != null" >
+        c_Cnum,
+      </if>
+      <if test="cIp != null" >
+        c_Ip,
+      </if>
+      <if test="cAddress != null" >
+        c_Address,
+      </if>
+      <if test="cTime != null" >
+        c_Time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="cId != null" >
+        #{cId,jdbcType=INTEGER},
+      </if>
+      <if test="cVideo != null" >
+        #{cVideo,jdbcType=VARCHAR},
+      </if>
+      <if test="cUser != null" >
+        #{cUser,jdbcType=VARCHAR},
+      </if>
+      <if test="cContent != null" >
+        #{cContent,jdbcType=VARCHAR},
+      </if>
+      <if test="cZnum != null" >
+        #{cZnum,jdbcType=INTEGER},
+      </if>
+      <if test="cCnum != null" >
+        #{cCnum,jdbcType=INTEGER},
+      </if>
+      <if test="cIp != null" >
+        #{cIp,jdbcType=VARCHAR},
+      </if>
+      <if test="cAddress != null" >
+        #{cAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="cTime != null" >
+        #{cTime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.longbro.bean.Comment" >
+    update comment
+    <set >
+      <if test="cVideo != null" >
+        c_Video = #{cVideo,jdbcType=VARCHAR},
+      </if>
+      <if test="cUser != null" >
+        c_User = #{cUser,jdbcType=VARCHAR},
+      </if>
+      <if test="cContent != null" >
+        c_Content = #{cContent,jdbcType=VARCHAR},
+      </if>
+      <if test="cZnum != null" >
+        c_Znum = #{cZnum,jdbcType=INTEGER},
+      </if>
+      <if test="cCnum != null" >
+        c_Cnum = #{cCnum,jdbcType=INTEGER},
+      </if>
+      <if test="cIp != null" >
+        c_Ip = #{cIp,jdbcType=VARCHAR},
+      </if>
+      <if test="cAddress != null" >
+        c_Address = #{cAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="cTime != null" >
+        c_Time = #{cTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where c_Id = #{cId,jdbcType=INTEGER}
+  </update>
+  <update id="updateComById" parameterType="com.longbro.bean.Comment" >
+    update comment
+    set 
+      c_Content = #{cContent,jdbcType=VARCHAR}
+    where c_Id = #{cId,jdbcType=INTEGER}
+  </update>
+</mapper>

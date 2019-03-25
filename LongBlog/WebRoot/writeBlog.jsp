@@ -19,6 +19,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
+   <link rel="shortcut icon" href="/LongBlog/images/useful/logo2.png" type="image/x-icon"/>
+	
 	<link href="css/base.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -30,7 +32,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
   <div class="topnav">
-      <a href="http://www.longqcloud.cn/LongBlog" target="_blank">Long Bro博客</a>——查看其它<a href="http://www.longqcloud.cn/LongVideos" target="_blank">Long Bro影院</a>
+      <a href="http://www.longqcloud.cn/" target="_blank">Long Bro博客</a>——查看其它<a href="http://tv.zy52113.com" target="_blank">Long Bro影院</a>
   </div>
     
     <%@include file="header.jsp" %>
@@ -42,7 +44,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                  acc=cookie[i].getValue().toString();
                 if(!acc.equals("")){//cookie中账号不为空，说明已登录过
                    %>
-                   
                    <div class="writeBlog">
     <form action="/LongBlog/ReleaseBlog" method="post">
        <!--   选择作者：<br><br>
@@ -70,7 +71,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <input type="submit" value="发布" id="btn" style="width: 77px; height: 45px">
     </form>
     
-    
     <script type="text/javascript" src="editor/wangEditor.min.js"></script>
     <script type="text/javascript">
         var E = window.wangEditor;
@@ -94,14 +94,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         editor.create();
         //初始化textarea的值
         $text1.val(editor.txt.html());
-        
     </script>
-                   
                    <%
-      
+                  break;
                 }
             }else if(i==cookie.length-1){//遍历到最后一个cookie仍没有，说明未登录
-            System.out.println("...............");
+              System.out.println("...............");
                     //for(int j=3;j>0;j--){
                         //Thread.sleep(1000);
                         //out.write("抱歉，你还未登录，"+j+"秒后为你跳转<br>"); 

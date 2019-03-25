@@ -8,12 +8,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>"> 
-    <title>Long Bro的博客</title>
+    <title>个人简介-LongBro的博客</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="Long Bro的博客">
-	<meta http-equiv="description" content="Long Bro的博客">
+	<meta http-equiv="keywords" content="Long Bro的博客,Long Bro,个人简介,关于我">
+	<meta http-equiv="description" content="Long Bro,一个将要步入大四的学生。">
+   <link rel="shortcut icon" href="/LongBlog/images/useful/logo2.png" type="image/x-icon"/>
+	
 	<link href="css/base.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -25,9 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
  <body>
 <div id="wrapper">
-  
      <%@include file="header.jsp" %>
-  
   <div class="container">
     <div class="con_content">
       <div class="about_box">
@@ -39,7 +39,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <!-- 可用于内容模板 --> 
         </div>
         <ul class="about_content">
-          <p> 人生就是一个得与失的过程，而我却是一个幸运者，得到的永远比失去的多。生活的压力迫使我放弃了轻松的前台接待，放弃了体面的编辑，换来虽有些蓬头垢面的工作，但是我仍然很享受那些熬得只剩下黑眼圈的日子，因为我在学习使用Photoshop、Flash、Dreamweaver、ASP、PHP、JSP...中激发了兴趣，然后越走越远....</p>
+          <p> 赵成龙，1995年10月16日出生于河南省南阳市，2015年9月份步入平顶山学院的学堂，就学于计算机科学与技术学院物联网工程专业，后学院名改为信息工程学院。机缘巧合下学习了Java这门神奇的语言，并对Java开发这有着炙热的爱，曾学习过Android APP开发，后转入Java web开发的学习。随着时间的流逝，对Java语言的热爱不减反增。没错，我是一名热爱搬砖的码农，我很菜，但我渴望优秀，时间会证明一切。</p>
           <p><img src="images/01.jpg"></p>
           <p>“冥冥中该来则来，无处可逃”。 </p>
         </ul>
@@ -59,7 +59,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   <%@include file="footer.jsp" %>
  
-
 </div>
 </body>
 </html>

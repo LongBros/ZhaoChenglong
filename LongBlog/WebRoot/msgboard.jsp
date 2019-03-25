@@ -8,7 +8,7 @@ String scp=request.getParameter("page");
 int cp=1;
  //将所有的页码添加至数组链表
 ArrayList<String> arr=new ArrayList<String>();
-for(int i=1;i<10;i++){
+for(int i=1;i<50;i++){
 	String t=i+"";
 	arr.add(t);
 }
@@ -29,24 +29,24 @@ for(int i=0;i<arr.size();i++){
   <head>
     <base href="<%=basePath%>">
     
-    <title>每日一句</title>
+    <title>每日一句-Long Bro博客</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
+	<meta http-equiv="keywords" content="每日一句,英汉佳句,LongBro博客,每日一句英语,每日一句正能量">
+	<meta http-equiv="description" content="每天一句，汉语加英语，语句优美，库中千条佳句。系统每天随机设定一条，切记，每天都有且仅有一句。记录过往日期及其对应的每日一句。">
+   <link rel="shortcut icon" href="/LongBlog/images/useful/logo2.png" type="image/x-icon"/>
 	
 	<link rel="stylesheet" type="text/css" href="css/my.css">
 	
 	<style type="text/css">
-	/*页码样式，learn.jsp中有*/
-.page{ margin:20px 0 ; text-align:center; width:100%;overflow: hidden;}
-.page a b {color: #aee1ff;}
-.page>b,.page a {margin: 0 2px;height: 26px;line-height: 26px;border-radius: 50%;width: 26px;text-align: center;display: inline-block}
-.page a {margin: 0 2px;height: 26px;line-height: 26px;border-radius: 50%;width: 26px;text-align: center;display: inline-block}/* 针对IE6 */
-.page>b,.page a:hover{background: #2a455d;color: #FFF;}
-.page a {color: #aee1ff;border: #89c9ef 1px solid}
+		.page{ margin:20px 0 ; text-align:center; width:100%;overflow: hidden;}
+		.page a b {color: #aee1ff;}
+		.page>b,.page a {margin: 0 2px;height: 26px;line-height: 26px;border-radius: 50%;width: 26px;text-align: center;display: inline-block}
+		.page a {margin: 0 2px;height: 26px;line-height: 26px;border-radius: 50%;width: 26px;text-align: center;display: inline-block}/* 针对IE6 */
+		.page>b,.page a:hover{background: #2a455d;color: #FFF;}
+		.page a {color: #aee1ff;border: #89c9ef 1px solid}
 	</style>
 
   </head>
@@ -92,14 +92,14 @@ for(int i=0;i<arr.size();i++){
               //System.out.println(year);
               //System.out.println(monday);
               %>
-                   <li>
-						<time class="cbp_tmtime"><span><%=monday %></span> <span><%=year %></span></time>
-						<div class="cbp_tmicon"></div>
-						<div class="cbp_tmlabel" data-scroll-reveal="enter right over 1s" >
-							<h2><%=chi %></h2>
-							 <p><%=eng %></p>
-						</div>
-				  </li>
+                <li>
+					<time class="cbp_tmtime"><span><%=monday %></span> <span><%=year %></span></time>
+					<div class="cbp_tmicon"></div>
+					<div class="cbp_tmlabel" data-scroll-reveal="enter right over 1s" >
+						<h2><%=chi %></h2>
+						 <p><%=eng %></p>
+					</div>
+			   </li>
 			 
               <%
               
@@ -119,16 +119,16 @@ for(int i=0;i<arr.size();i++){
   <%
     if(cp>1){
        %>
-         <a href="/LongBlog/msgboard.jsp?page=<%=cp-1%>">&lt;&lt;</a>
+         <a href="/msgboard.jsp?page=<%=cp-1%>">&lt;&lt;</a>
        <%
     }
    %>
        
        
        <%
-     if(cp<=6){//页数小于等于6，直接输出6个页数
+     if(pages<=6){//总页数小于等于6，直接输出6个页数
         for(int j=1;j<=pages;j++){
-         String pageIndex="<a href=\"/LongBlog/msgboard.jsp?page="+j+"\">"+j+"</a>";
+         String pageIndex="<a href=\"/msgboard.jsp?page="+j+"\">"+j+"</a>";
          if(j==cp){
               out.write("<b>"+j+"</b>");     
          }else{
@@ -138,7 +138,7 @@ for(int i=0;i<arr.size();i++){
      }else{//页数大于6，算法设计只显示6个页数
         if(cp>pages-6){//当前页码大于总页码-6，输出后六页
            for(int j=pages-5;j<=pages;j++){
-              String pageIndex="<a href=\"/LongBlog/msgboard.jsp?page="+j+"\">"+j+"</a>";
+              String pageIndex="<a href=\"/msgboard.jsp?page="+j+"\">"+j+"</a>";
               if(j==cp){
                 out.write("<b>"+j+"</b>");     
               }else{
@@ -147,7 +147,7 @@ for(int i=0;i<arr.size();i++){
            }
         }else{//当前页码小于总页码-6，输出当前页码后的六页
             for(int j=cp;j<cp+6;j++){
-               String pageIndex="<a href=\"/LongBlog/msgboard.jsp?page="+j+"\">"+j+"</a>";
+               String pageIndex="<a href=\"/msgboard.jsp?page="+j+"\">"+j+"</a>";
                if(j==cp){//当前页码未加链接
                    out.write("<b>"+j+"</b>");     
                }else{
@@ -161,7 +161,7 @@ for(int i=0;i<arr.size();i++){
    <%
     if(cp<pages){
        %>
-         <a href="/LongBlog/msgboard.jsp?page=<%=cp+1%>">&gt;&gt;</a>
+         <a href="/msgboard.jsp?page=<%=cp+1%>">&gt;&gt;</a>
        <%
     }
    %>

@@ -14,10 +14,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.longbro.util.JdbcUtil;
+import com.longbro.util.OtherUtil;
+
 import dao.BlogsDao;
 import beans.Blogs;
-import util.JdbcUtil;
-import util.OtherUtil;
 
 public class UpdateBlog extends HttpServlet {
 
@@ -35,6 +36,7 @@ public class UpdateBlog extends HttpServlet {
 		ResultSet rs;
 		String b_Id=request.getParameter("id");//需修改的博客id
 		String author=request.getParameter("author");//作者
+		String image=request.getParameter("image");//图片路径
 		String category=request.getParameter("category");//类别
 		String title=request.getParameter("title");//标题
 		String content=request.getParameter("content");//内容
@@ -51,12 +53,12 @@ public class UpdateBlog extends HttpServlet {
 			blog.setTitle(title);
 			blog.setContent(content);
 			blog.setAuthor(author);
-			
+			blog.setImgPath(image);
 			BlogsDao dao=new BlogsDao();
 			dao.updateBlog(b_Id,category,blog);
 			out.write("<script type=\"text/javascript\">window.alert(\"修改成功\");</script>");
             //博客修改成功，重定向至首页			
-			response.sendRedirect("/LongBlog/management/viewBlogs.jsp");
+			response.sendRedirect("/management/viewBlogs.jsp");
 		}
 		out.write("</body></html>");
 		

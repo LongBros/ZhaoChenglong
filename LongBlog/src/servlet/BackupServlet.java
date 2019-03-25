@@ -17,7 +17,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import util.JdbcUtil;
+import com.longbro.util.AddressUtils;
+import com.longbro.util.JdbcUtil;
+
 import beans.Blogs;
 import beans.Comment;
 import beans.ViewCon;
@@ -35,10 +37,13 @@ public class BackupServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		PrintWriter out=response.getWriter();
-		out.write("<head><title>数据备份防丢失</title></head>");
-		backupBlog(out);
-		backupCom(out);
-		backupView(out);
+		out.write("<head><title>数据备份防丢失|向数据库添加地址字段</title></head>");
+//		backupBlog(out);
+//		backupCom(out);
+//		backupView(out);
+		//因表中添加地址字段，需为库中已有的评论和登录日志添加地址
+		addAddress(out);
+		addAddress1(out);
 
 	}
 
@@ -47,6 +52,68 @@ public class BackupServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+	}
+	//为库中已有的评论添加对应的地址
+	public static void addAddress(PrintWriter out){
+		Connection con=JdbcUtil.getConnection();
+		out.write("开始为评论表插入地址字段...<br><br>");
+		try {
+			Statement st=con.createStatement();
+			String s1="select * from comment";
+			ResultSet rs=st.executeQuery(s1);
+			while(rs.next()){
+				int  id=rs.getInt("c_Id");
+				String ip=rs.getString("c_Ip");
+				String a=rs.getString("c_Address");
+				if(a.equals("")){
+					String add=AddressUtils.getAddByIp(ip);
+					String s2="update comment set c_Address='"+add+"' where c_Id='"+id+"';";
+					out.println(s2+"<br>");
+					Statement st1=con.createStatement();
+					st1.executeUpdate(s2);			
+				}else{
+					out.println("该条记录库中已有地址<br>");
+				}
+			}
+			out.write("已为所有评论插入地址字段...<br><br>");
+			rs.close();
+			st.close();
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	//为库中已有的登录日志添加对应的地址
+	public static void addAddress1(PrintWriter out){
+		Connection con=JdbcUtil.getConnection();
+		out.write("开始为登录日志表插入地址字段...<br><br>");
+		try {
+			Statement st=con.createStatement();
+			String s1="select * from log_vis";
+			ResultSet rs=st.executeQuery(s1);
+			while(rs.next()){
+				int id=rs.getInt("l_Id");
+				String ip=rs.getString("l_Ip");
+				String a=rs.getString("l_Address");
+				if(a.equals("")){
+					String add=AddressUtils.getAddByIp(ip);
+					String s2="update log_vis set l_Address='"+add+"' where l_Id='"+id+"';";
+					out.println(s2+"<br>");
+					Statement st1=con.createStatement();
+					st1.executeUpdate(s2);			
+				}
+			}
+			out.write("已为所有登录日志插入地址字段。..<br><br>");
+			rs.close();
+			st.close();
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	//备份博文
 	public static void backupBlog(PrintWriter out){

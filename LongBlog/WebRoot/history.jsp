@@ -14,8 +14,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
+	<meta http-equiv="keywords" content="Long Bro博客,建博历史,博客成长史">
+	<meta http-equiv="description" content="记录Long Bro博客的成长历史，更新历史，建博历史...">
+	 <link rel="shortcut icon" href="/LongBlog/images/useful/logo2.png" type="image/x-icon"/>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
 

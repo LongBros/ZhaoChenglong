@@ -39,6 +39,8 @@ for(int i=0;i<arr.size();i++){
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="Long Bro博客">
 	<meta http-equiv="description" content="Long Bro博客">
+   <link rel="shortcut icon" href="/LongBlog/images/useful/logo2.png" type="image/x-icon"/>
+	
 	<link href="css/base.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery.js"></script>

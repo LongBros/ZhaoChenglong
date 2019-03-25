@@ -1,0 +1,204 @@
+
+body{
+	background: #f4f4f4;
+	
+}
+/*导航栏样式*/
+.bar{
+	height: 60px;
+	width: 100%;
+	background: green;
+}
+.nav_search_input{
+	background-color:#fff;
+	margin-left:10px;
+	margin-top:10px;
+	border:0;
+	padding-left:5px;
+	
+	color:#000;font-size:12px;}
+.nav_search_btn{
+	background:url(/LongVideos/images/search_btn_bg.png) no-repeat;
+	border:0;margin-top:10px;margin-left:1px;
+	
+}
+.input{
+	padding-left: 5px;
+	border: 1px solid #ccc;
+	width: 158px;
+	height: 26px;
+	line-height: 26px;
+	background-color: #e5e5e5;
+}
+.search{
+	background-color: #333;
+	color: #FFF;
+	margin-left: 5px;
+	width: 50px;
+	border: none;
+	cursor: pointer;
+	height: 28px;
+	line-height: 28px;
+	border-radius: 5px;
+}
+.bar ul{
+	margin-top:20px;
+	display: inline;
+}
+.bar li{
+	padding-top:20em;
+	display: inline;
+	text-align: center;
+	font-size: 20px;
+	margin-left: 30px;
+}
+.bar li current a{
+	line-height:60px;
+	text-decoration: none;
+	color:black;
+	margin-top:10px;
+	font-size: 25px;
+}
+.bar li a{
+	line-height:60px;
+	text-decoration: none;
+	color:white;
+	margin-top:10px;
+}
+/*顶部横幅及小喇叭*/
+.banner{
+	height: 20px;
+	margin-top:20px;
+	margin-left:50px; 
+	color: blue;
+}
+/*小喇叭图片*/
+.banner img{
+	width: 18px;
+	height: 18px;
+}
+/*小喇叭广播文本*/
+.banner span{
+	color: red;
+}
+/*热门电影四字*/
+.title{
+	margin-left:40px; 
+	margin-top:10px;
+}
+/*最新电视剧*/
+.newest{
+	margin-left:40px; 
+	margin-top:650px;
+}
+.cate{
+	margin-left: 60px;
+	margin-top: 10px;
+}
+.cate a{
+	text-decoration: none;
+}
+.cate a:HOVER{
+	text-decoration: underline;
+	color: #f00;
+}
+.all{
+	
+}
+/*块状视频列表样式*/
+.whole{
+	float:left;
+	padding-left:30px;
+	margin-left: 10px;
+	margin-top: 20px;
+	width: 180px;
+	height:280px;
+}
+
+.whole img{
+	background-image: url("../images/imgBackground.png");
+	width: 180px;
+	height: 240px;
+}
+
+.whole a{
+	text-decoration: none;
+}
+.whole a:hover{
+	text-decoration: none;
+	color:#f00;
+}
+.whole span{
+	display: inline-block;
+    float: left;
+    width: 144px;
+    margin: 0 5px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #222
+}
+.whole p{
+	font-size: 12px;
+    color: #999;
+    margin: 0 5px;
+    width: 170px;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.blank{
+	padding-top:20px;
+	width:1000px;
+	height:800px;
+}
+hr{
+	margin-top: 10px;
+}
+
+/*页码样式*/
+.page {
+	text-align: center;
+	color: #666;
+	width: 100%;
+	clear: both;
+	margin: 10px 0;
+	display: block
+}
+.page a{
+	border:1px solid #e6e6e6;
+	margin-top:20px;
+	margin-left:2px;
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	background-color: #fff;
+	text-align: center;
+	margin: 0,4px;
+	color: #222;
+	text-decoration: none;
+}
+.page current a{
+	background-color: gray;
+}
+
+/*排行榜样式*/
+.rank{
+	float:left;
+	background: #ffffff;
+	margin-left: 80px;
+	height:320px;
+	width: 200px;
+}
+.rank a{
+	text-decoration: none;
+}
+.rank pai{
+	
+	
+}

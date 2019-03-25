@@ -2,7 +2,7 @@ package others;
 
 import java.util.Random;
 
-import util.OtherUtil;
+import com.longbro.util.OtherUtil;
 
 public class Test1 {
 

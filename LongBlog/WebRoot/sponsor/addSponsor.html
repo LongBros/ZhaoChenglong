@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>添加赞助记录-LongBro博客</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="/sponsor/sponsor.css">
+  </head>
+  
+  <body>
+   <form id="power" action="/AddSponsor" method="post">
+    <fieldset>
+    
+        <legend>LongBro博客赞助记录录入</legend>
+        <ol>
+            <li>
+                <label for="source">来源：</label>
+                <input id="source" name="source" type="text" placeholder="微信，支付宝，QQ..." maxlength="5" min="1100"  required autofocus>
+            </li>
+            <li>
+                <label for="remark">备注：</label>
+                <input id="remark" name="remark" type="text" placeholder="备注">
+            </li>
+            <li>
+                <label for="amount">金额：</label>
+                <input id="amount" name="amount" type="text" placeholder="金额" required>
+            </li>
+            <li>
+                <label for="time">时间：</label>
+                <input id="time" name="time" type="text"  required>
+            </li>
+        </ol>
+            <center><input type="submit" value="提交"></center><br>
+            <center><a href="showSponsor.jsp">查看所有赞助</a></center>
+    </fieldset>
+    </form>
+    
+ <script>
+     var date=new Date();
+     var time=date.toLocaleString();
+     document.getElementById("time").value=time;
+ </script>
+  </body>
+</html>

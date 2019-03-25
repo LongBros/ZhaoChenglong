@@ -1,6 +1,6 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
-<%@page import="util.JdbcUtil"%>
+<%@page import="com.longbro.util.JdbcUtil"%>
 <%@page import="java.sql.Connection"%>
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%

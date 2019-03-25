@@ -15,11 +15,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.longbro.util.JdbcUtil;
+import com.longbro.util.OtherUtil;
+
 import dao.BlogsDao;
 import beans.Blogs;
-import util.JdbcUtil;
-import util.OtherUtil;
-
+/**
+ * 发布博文，即向数据库添加记录，还要生成该博文的静态html文件
+ * @author Administrator
+ *
+ */
 public class ReleaseBlog extends HttpServlet {
 
 	
@@ -27,8 +32,6 @@ public class ReleaseBlog extends HttpServlet {
 			throws ServletException, IOException {
 
 	}
-
-	
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		Connection con;
@@ -58,11 +61,8 @@ public class ReleaseBlog extends HttpServlet {
 				author=rs.getString("a_Name");
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-	    
 		PrintWriter out=response.getWriter();
 		if(title.equals("")){
 			out.write("没有标题的博文是一篇不完整的博文，so，请无论如何为你的博文添加一个标题呢！！！");
@@ -75,10 +75,12 @@ public class ReleaseBlog extends HttpServlet {
 			blog.setTime(time);
 			blog.setAuthor(author);
 			BlogsDao dao=new BlogsDao();
-			dao.writeBlog(category,blog);
+			dao.writeBlog(category,blog);//向数据库写入博客
+			String url="http://www.longqcloud.cn/detailblog.jsp?id=";
+			dao.genHtml(url);//生成该新建博客的静态博客页面
 			
             //博客发送成功，重定向至首页			
-			response.sendRedirect("/LongBlog");
+			response.sendRedirect("/");
 		}
 		
 	}

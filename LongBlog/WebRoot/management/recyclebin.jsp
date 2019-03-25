@@ -1,4 +1,4 @@
-<%@page import="util.JdbcUtil"%>
+<%@page import="com.longbro.util.JdbcUtil"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>

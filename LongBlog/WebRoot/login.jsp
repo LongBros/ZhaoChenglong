@@ -18,6 +18,8 @@ System.out.println(option);
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
+   <link rel="shortcut icon" href="/LongBlog/images/useful/logo2.png" type="image/x-icon"/>
+	
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
@@ -53,16 +55,16 @@ System.out.println(option);
                  acc=cookie[i].getValue().toString();
                 if(!acc.equals("")){//cookie中账号不为空，说明已登录过
                      if(option.equals("write")){//点击写博客进入的登录界面，登录后返回写博客界面
-                         response.sendRedirect("/LongBlog/writeBlog.jsp");
+                         response.sendRedirect("/writeBlog.jsp");
                      }else if(option.equals("manage")){//点击后台管理进入的登录界面，登陆后进入管理界面
-                         response.sendRedirect("/LongBlog/management/manage.jsp");
+                         response.sendRedirect("/management/manage.jsp");
                      }else if(option.equals("gallery")){//点击后台管理进入的登录界面，登陆后进入管理界面
-                         response.sendRedirect("/LongBlog/listpic.jsp");
+                         response.sendRedirect("/listpic.jsp");
                      }
                 }
            }else if(i==(cookie.length-1)&&acc.equals("")){//cookie中无登录信息，进行登录验证
                 %>
-                 <form action="/LongBlog/Login?option=<%=option %>" method="post">
+                 <form action="/Login?option=<%=option %>" method="post">
                                                                    管&nbsp;&nbsp;理:<input type="text" name="account"><br>
                                                                    密&nbsp;&nbsp;码:<input type="password" name="password"><br>
                    <input type="submit" value="登录">
